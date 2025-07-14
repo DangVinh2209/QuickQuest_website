@@ -1,0 +1,18 @@
+.signup {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+}
+
+.signup:hover {
+    background-color: #554fd3;
+}
