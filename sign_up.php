@@ -27,11 +27,12 @@ if(isset($_POST['submit'])){
         $output='your email is already exist';
     }
     elseif($_POST['password']!=$_POST['confirm_password']){
-        $output='confirm pass is fail';
+        $output='confirm password is failed';
     }
     else{
         $output='Created Successfully';
-        createAccount($pdo,$_POST['name'],$_POST['email'],$_POST['password']);
+        $encryptedPassword=password_hash($_POST['password'],PASSWORD_DEFAULT);
+        createAccount($pdo,$_POST['name'],$_POST['email'],$encryptedPassword);
     }
     include 'templates/sign_up.html.php';
 }

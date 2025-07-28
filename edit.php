@@ -1,4 +1,8 @@
 <?php
+session_start();
+$email=$_SESSION['email'];
+$title='Edit';
+
 if(isset($_POST['changed_question']) && $_POST['changed_question']!=$_POST['question']){
     include 'database/dbConnection.php';
     include 'database/dbFunctions.php';

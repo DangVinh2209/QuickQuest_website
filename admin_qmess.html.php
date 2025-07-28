@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="admin_style.css">
 </head>
 <body>
-    <br>
-    <form action='' method='post'>
-        <div class="row">
-            <div class="col-10">
-                <input class='form-control' placeholder='COMP1773' name='new_module' autofocus required>
-            </div>
+    
+    <div class="row gy-4">
+        <?php foreach($users as $user):?>
+            
             <div class="col-2">
-                <button class='btn btn-dark btn-md rounded-pill' type='submit' >Submit</button>
+                <form method='post'>
+                <input type='hidden' value=<?=$user['id']?> name='receiver_id'>
+                <input type='hidden' value=<?=$user['name']?> name='receiver_name'>
+                <button class='btn btn-light btn-md rounded-pill' type='submit' name='user_clicked'><img class="img-avatar" src='images/<?php echo $user['avatar']?>'>
+                <?=$user['name']?></button>
+                </form>
             </div>
-        </div>
-    </form>
+        
+        <?php endforeach?>
+    </div>
+    
+
 </body>
 </html>

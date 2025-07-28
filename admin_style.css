@@ -11,29 +11,10 @@
     background-color: #E4E4E4;
 }
 
-.img-post,.preview-post{
-    max-width: 500px;
-    max-height: 500px;
-    width: auto;
-    height: auto;
+.img-post{
+    height: 500px;
+    width: 500px;
     border-radius: 20px;
-    object-fit: cover;
-}
-.img-comment{
-    max-width: 100px;
-    max-height: 100px;
-    width: auto;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-}
-.avatar-profile{
-    max-width: 200px;
-    max-height: 200px;
-    width: auto;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
 }
 .img-avatar{
     height: 50px;
@@ -50,7 +31,7 @@
 }
 
 nav.navigation{
-      background-color:  #AAB3C0;
+      background-color:  #1868d9;
       padding: 10px 0;
       text-align: center;
       position: fixed;
@@ -69,7 +50,7 @@ main {
       padding: 15px;
     }
 .title {
-      background-color:  #AAB3C0;
+      background-color:  #1868d9;
       padding: 15px;
       text-align: center;
       font-size: 37px;
@@ -107,6 +88,3 @@ main {
       text-align: center;
       margin-top: 15px;
     }
-#text{
-    background-color: #AAB3C0;
-}

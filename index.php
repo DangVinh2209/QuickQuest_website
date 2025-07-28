@@ -5,14 +5,20 @@ $title='QuickQuest';
 try{
     include 'database/dbConnection.php';
     $questions=listQuestion($pdo);
+    $email=$_SESSION['email'];
     ob_start();
     include 'templates/home.html.php';
     $output=ob_get_clean();
-    $email=$_SESSION['email'];
+    
 }
 catch(PDOException $e){
     $title='An error has occured';
     $output='Database error:'.$e->getMessage().' in '.$e->getFile().':'.$e->getLine();
 
 }
-include 'templates/layout.html.php';
+if ($email=='admin@gmail.com'){
+    include 'templates/admin_layout.html.php';
+}
+else{
+    include 'templates/layout.html.php';
+}
